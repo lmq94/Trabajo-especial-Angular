@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Cookie } from './Cookie';
 
 @Component({
   selector: 'app-cookie-cards',
@@ -7,7 +8,22 @@ import { Component, OnInit } from '@angular/core';
 })
 export class CookieCardsComponent implements OnInit {
 
-  constructor() { }
+
+
+  constructor() { 
+
+    cookies: Cookie[] = [
+      { name: 'Don Satur',
+        type: 'Agridulce',
+        price: 180,
+        stock: 10,
+        image:String;
+
+      }
+
+    ]
+
+  }
 
   ngOnInit(): void {
   }
