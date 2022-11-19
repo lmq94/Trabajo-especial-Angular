@@ -8,20 +8,39 @@ import { Cookie } from './Cookie';
 })
 export class CookieCardsComponent implements OnInit {
 
+  cookies: Cookie[] = [
+    { name: 'Don Satur',
+      type: 'Agridulce',
+      price: 180,
+      stock: 10,
+      image: 'assets/img/DonSatur-Agridulce.jpg'
+    },
+
+    { name: 'Don Satur',
+      type: 'Negritas',
+      price: 180,
+      stock: 10,
+      image: 'assets/img/DonSatur-Negritas.jpg'
+    },
+
+    { name: 'Don Satur',
+      type: 'Salado',
+      price: 180,
+      stock: 10,
+      image: 'assets/img/DonSatur-Salado.jpg'
+    },
+
+    
+    
+
+    
+
+  ]
 
 
   constructor() { 
 
-    cookies: Cookie[] = [
-      { name: 'Don Satur',
-        type: 'Agridulce',
-        price: 180,
-        stock: 10,
-        image:String;
-
-      }
-
-    ]
+    
 
   }
 

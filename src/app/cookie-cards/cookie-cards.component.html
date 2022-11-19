@@ -1,1 +1,15 @@
-<p>cookie-cards works!</p>
+
+<div class="container">
+    <div class="row row-cols-4">
+        <div class="col" *ngFor="let cookie of cookies">
+            <div class="card m-4" style="width: 18rem;" >
+                <img [src]="cookie.image" class="card-img-top" [alt]="cookie.name">
+                <div class="card-body">
+                <h5 class="card-title">{{cookie.name}}</h5>
+                <p class="card-text">{{cookie.type}}</p>
+                <p class="card-text">${{cookie.price}}</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

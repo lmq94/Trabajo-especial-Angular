@@ -6,12 +6,10 @@ import { AppComponent } from './app.component';
 import { CookieCardsComponent } from './cookie-cards/cookie-cards.component';
 
 
-
 @NgModule({
   declarations: [
-
-  
-    CookieCardsComponent
+    AppComponent,
+    CookieCardsComponent,
   ],
   imports: [
     BrowserModule,
