@@ -2,8 +2,7 @@
 export interface Cookie{
     name: String;
     type: String;
-    price: number;
-    stock: number;
+    price: Number;
+    stock: Number;
     image: String;
-    quantity: number;
 }
