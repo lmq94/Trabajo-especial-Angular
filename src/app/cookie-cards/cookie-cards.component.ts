@@ -13,24 +13,21 @@ export class CookieCardsComponent implements OnInit {
       type: 'Agridulce',
       price: 180,
       stock: 10,
-      image: 'assets/img/DonSatur-Agridulce.jpg',
-      quantity: 0
+      image: 'assets/img/DonSatur-Agridulce.jpg'
     },
 
     { name: 'Don Satur',
       type: 'Negritas',
       price: 180,
       stock: 10,
-      image: 'assets/img/DonSatur-Negritas.jpg',
-      quantity: 0
+      image: 'assets/img/DonSatur-Negritas.jpg'
     },
 
     { name: 'Don Satur',
       type: 'Salado',
       price: 180,
-      stock: 0,
-      image: 'assets/img/DonSatur-Salado.jpg',
-      quantity: 0
+      stock: 10,
+      image: 'assets/img/DonSatur-Salado.jpg'
     },
 
     
