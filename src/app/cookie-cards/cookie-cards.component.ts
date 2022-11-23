@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit,  } from '@angular/core';
 import { Cookie } from './Cookie';
 
 @Component({
@@ -13,21 +13,24 @@ export class CookieCardsComponent implements OnInit {
       type: 'Agridulce',
       price: 180,
       stock: 10,
-      image: 'assets/img/DonSatur-Agridulce.jpg'
+      image: 'assets/img/DonSatur-Agridulce.jpg',
+      quantity:0
     },
 
     { name: 'Don Satur',
       type: 'Negritas',
       price: 180,
       stock: 10,
-      image: 'assets/img/DonSatur-Negritas.jpg'
+      image: 'assets/img/DonSatur-Negritas.jpg',
+      quantity:0
     },
 
     { name: 'Don Satur',
       type: 'Salado',
       price: 180,
-      stock: 10,
-      image: 'assets/img/DonSatur-Salado.jpg'
+      stock: 0,
+      image: 'assets/img/DonSatur-Salado.jpg',
+      quantity:0
     },
 
     
@@ -45,6 +48,11 @@ export class CookieCardsComponent implements OnInit {
   }
 
   ngOnInit(): void {
+
+  }
+
+  maxReached(m: String): void{
+    alert(m);
   }
 
 }
