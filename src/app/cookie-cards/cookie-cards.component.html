@@ -8,12 +8,29 @@
                     <h5 class="card-title"> {{cookie.name}} </h5>
                     <p class="card-text"> {{cookie.type}} </p>
                     <p class="card-text" >${{cookie.price}} </p>
-                    <app-int-calculator [(quantity)] = "cookie.quantity" [max]="cookie.stock"  *ngIf="cookie.stock" (maxReached)="maxReached($event)" ></app-int-calculator>
+                    <app-int-calculator [(quantity)] = "cookie.quantity" [max]= "cookie.stock"  *ngIf="cookie.stock" (maxReached)="maxReached($event)" ></app-int-calculator>
                     <p><span class="bg-warning" *ngIf="cookie.stock==0"> SIN STOCK </span></p>
                     <button class="btn btn-primary" *ngIf="cookie.stock!=0" (click)="addCart(cookie)"> Comprar </button>
                 </div>
             </div>
             
         </div>
+    </div>
+    <div class="container xl mb-5 mt-5">
+        <button class="btn btn-primary" type="button" data-bs-toggle="offcanvas" data-bs-target="#staticBackdrop" aria-controls="staticBackdrop">
+            Ver carrito de compras
+          </button>
+          
+          <div class="offcanvas offcanvas-start" data-bs-backdrop="static" tabindex="-1" id="staticBackdrop" aria-labelledby="staticBackdropLabel">
+            <div class="offcanvas-header">
+              <h5 class="offcanvas-title" id="staticBackdropLabel">Carrito de compras</h5>
+              <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+            </div>
+            <div class="offcanvas-body">
+              <div>
+               <app-cart></app-cart>
+              </div>
+            </div>
+          </div>
     </div>
 </div>

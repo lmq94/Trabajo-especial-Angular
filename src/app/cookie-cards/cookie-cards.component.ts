@@ -52,7 +52,6 @@ export class CookieCardsComponent implements OnInit {
   addCart(cookie:Cookie):void{
     this.cart.addCart(cookie);
     cookie.stock -= cookie.quantity;
-    cookie.quantity = 0;
   }
 
 
