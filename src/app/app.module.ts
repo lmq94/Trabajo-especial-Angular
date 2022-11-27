@@ -7,6 +7,7 @@ import { CookieCardsComponent } from './cookie-cards/cookie-cards.component';
 import { IntCalculatorComponent } from './int-calculator/int-calculator.component';
 import { FormsModule } from '@angular/forms';
 import { CookieAboutComponent } from './cookie-about/cookie-about.component';
+import { CartComponent } from './cart/cart.component';
 
 
 
@@ -16,6 +17,7 @@ import { CookieAboutComponent } from './cookie-about/cookie-about.component';
     CookieCardsComponent,
     IntCalculatorComponent,
     CookieAboutComponent,
+    CartComponent,
   ],
   imports: [
     BrowserModule,
