@@ -1,4 +1,5 @@
 import { Component, OnInit,  } from '@angular/core';
+import { CookieCartService } from '../cookie-cart.service';
 import { Cookie } from './Cookie';
 
 @Component({
@@ -41,11 +42,20 @@ export class CookieCardsComponent implements OnInit {
   ]
 
 
-  constructor() { 
 
-    
+  constructor(private  cart:CookieCartService) {
+   
+   }
 
+
+
+  addCart(cookie:Cookie):void{
+    this.cart.addCart(cookie);
+    cookie.stock -= cookie.quantity;
+    cookie.quantity = 0;
   }
+
+
 
   ngOnInit(): void {
 
