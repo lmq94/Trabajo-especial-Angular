@@ -8,6 +8,7 @@ import { IntCalculatorComponent } from './int-calculator/int-calculator.componen
 import { FormsModule } from '@angular/forms';
 import { CookieAboutComponent } from './cookie-about/cookie-about.component';
 import { CartComponent } from './cart/cart.component';
+import {HttpClientModule} from '@angular/common/http';
 
 
 
@@ -22,7 +23,8 @@ import { CartComponent } from './cart/cart.component';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    FormsModule
+    FormsModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]

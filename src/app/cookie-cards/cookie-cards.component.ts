@@ -1,4 +1,5 @@
 import { Component, OnInit,  } from '@angular/core';
+import { CookieDataService } from '../cookie--data.service';
 import { CookieCartService } from '../cookie-cart.service';
 import { Cookie } from './Cookie';
 
@@ -9,41 +10,10 @@ import { Cookie } from './Cookie';
 })
 export class CookieCardsComponent implements OnInit {
 
-  cookies: Cookie[] = [
-    { name: 'Don Satur',
-      type: 'Agridulce',
-      price: 180,
-      stock: 10,
-      image: 'assets/img/DonSatur-Agridulce.jpg',
-      quantity:0
-    },
-
-    { name: 'Don Satur',
-      type: 'Negritas',
-      price: 180,
-      stock: 10,
-      image: 'assets/img/DonSatur-Negritas.jpg',
-      quantity:0
-    },
-
-    { name: 'Don Satur',
-      type: 'Salado',
-      price: 180,
-      stock: 0,
-      image: 'assets/img/DonSatur-Salado.jpg',
-      quantity:0
-    },
-
-    
-    
-
-    
-
-  ]
+  cookies: Cookie[] = []
 
 
-
-  constructor(private  cart:CookieCartService) {
+  constructor(private  cart:CookieCartService, private cookieData:CookieDataService ) {
    
    }
 
@@ -57,6 +27,7 @@ export class CookieCardsComponent implements OnInit {
 
 
   ngOnInit(): void {
+    this.cookieData.getAll().subscribe(cookies => this.cookies = cookies)
 
   }
 
