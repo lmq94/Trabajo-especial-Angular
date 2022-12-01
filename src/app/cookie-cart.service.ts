@@ -12,16 +12,22 @@ export class CookieCartService {
 
 
   addCart(cookie:Cookie){
-    let cosa: Cookie = this._cookieList.find((v1) => v1.name == cookie.name);
-    if(!cosa){
+    let item = this._cookieList.find(c => c.name === cookie.name && c.type == cookie.type);
+    if(!item){
       this._cookieList.push({...cookie});
     }
     else{
-      cosa.quantity += cookie.quantity;
+   
+        item.quantity += cookie.quantity;
+   
+
+
     }
-    this.cookieList.next(this._cookieList);
+    
     
   }
 
 
 }
+
+

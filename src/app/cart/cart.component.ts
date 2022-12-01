@@ -11,11 +11,30 @@ export class CartComponent implements OnInit {
 
   cartList: Cookie[] = [];
 
+
   constructor(private  cart:CookieCartService) { 
-    cart.cookieList.subscribe(c => this.cartList = c)
+    this.cart.cookieList.subscribe(c => this.cartList = c);
+    console.log(this.cartList);
+   
   }
 
   ngOnInit(): void {
+  
+    
+ 
+  }
+
+  total(): number{
+
+    let  total: number = 0;
+    this.cartList.forEach(beer => {
+      total += (beer.quantity * beer.price)
+      
+    });
+
+    return total;
+
+
   }
 
 }

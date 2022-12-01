@@ -1,6 +1,8 @@
 
 
 <ul>
-    <li *ngFor = " let cookie of cartList"> {{cookie.name}}: {{cookie.quantity}} </li>
+    <li *ngFor = " let cookie of cartList"> {{cookie.name}} {{cookie.type}}: {{cookie.quantity}} Unidades  </li>
         
 </ul>
+
+<span>Total: ${{total()}}</span>
