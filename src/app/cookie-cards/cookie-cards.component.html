@@ -9,7 +9,7 @@
                     <p class = "card-text"> {{cookie.type}} </p>
                     <p class = "card-text" >${{cookie.price}} </p>
                     <div *ngIf = "cookie.stock > 0 ">
-                      <app-int-calculator [(quantity)] = "cookie.quantity" [max] = "cookie.stock"  *ngIf= "cookie.stock" (maxReached)= "maxReached($event)" ></app-int-calculator>
+                      <app-int-calculator [(quantity)] = "cookie.quantity" [max] = "cookie.stock"   (maxReached)= "maxReached($event)" ></app-int-calculator>
                       <button class="btn btn-primary" (click) = "addCart(cookie)"> Comprar </button>
                     </div>
                     <p><span class="bg-warning" *ngIf= "cookie.stock == 0 "> SIN STOCK </span></p>
@@ -31,7 +31,7 @@
             </div>
             <div class = "offcanvas-body">
               <div>
-               <app-cart></app-cart>
+               <app-cart (resetQuantity)= "resetQuantity($event)" > </app-cart>
               </div>
             </div>
           </div>

@@ -1,8 +1,13 @@
 
 
 <ul>
-    <li *ngFor = " let cookie of cartList"> {{cookie.name}} {{cookie.type}}: {{cookie.quantity}} Unidades  </li>
+    <li *ngFor = " let cookie of cartList"> {{cookie.name}} {{cookie.type}}: {{cookie.quantity}} Unidades  {{priceGruop(cookie.price, cookie.quantity)| currency}} </li>
         
 </ul>
 
-<span>Total: ${{total()}}</span>
+<div class="d-flex justify-content-between">
+    <span>Total: {{total()| currency}}</span> 
+    <button (click) = "emptyCart()"> Pagar</button> 
+
+</div>
+

@@ -23,18 +23,23 @@ export class CookieCardsComponent implements OnInit {
     this.cart.addCart(cookie);
     cookie.stock -= cookie.quantity;
     cookie.quantity = 0;
-    console.log(this)
+    console.log(this);
   }
 
-
+  
 
   ngOnInit(): void {
     this.cookieData.getAll().subscribe(cookies => this.cookies = cookies)
-
   }
 
-  maxReached(m: String): void{
+  maxReached(m: String): void {
     alert(m);
   }
+
+  resetQuantity(m: String): void {
+    alert(m);
+  }
+
+
 
 }
